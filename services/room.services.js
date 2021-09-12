@@ -114,7 +114,7 @@ const service = {
   //Function to book room
   bookRoom(id, newData) {
     let flag = true;
-    let output = [];
+    let output = {};
     let message = "";
     let selectedRoom = data[0].rooms.filter((r) => r.id == id);
     let selectedCustomer = data[1].customer.filter((c) => {
@@ -139,16 +139,15 @@ const service = {
 
     if (flag) {
       for (let i in data[0].rooms) {
-        if (data[0].rooms[i].id == newData.id) {
+        if (data[0].rooms[i].name == newData.name) {
           data[0].rooms[i].date.push(newData.date);
           data[0].rooms[i].status = "Booked";
-          output.push(data[0].rooms[i]);
+          output=data[0].rooms[i];
         }
       }
       for (let i in data[1].customer) {
         if (data[1].customer[i].room == newData.name) {
           data[1].customer[i].date.push(newData.date);
-          output.push(data[1].customer[i]);
         }
       }
       return output;
