@@ -100,7 +100,7 @@ const service = {
         date: [],
         start: "",
         end: "",
-        id: "",
+        id,
         customer: "",
         status: "available",
       };
