@@ -17,7 +17,7 @@ let data = [
         name: "Room2",
         status: "booked",
         customer: "Customer3",
-        date: ["10/9/21"],
+        date: ["10/9/21",],
         start: "12.01 am",
         end: "11.59 pm",
         seats: 1000,
